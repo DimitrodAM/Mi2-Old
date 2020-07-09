@@ -1,4 +1,5 @@
 # Mi2
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/DimitrodAM/Mi2/Firebase%20CI)
 
 The platform is available at https://mi2.dimitrodam.net.
 
