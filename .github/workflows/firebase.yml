@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - master
+    paths-ignore:
+      - LICENSE
+      - README.md
+      - .idea/**
 
 jobs:
   build:
@@ -11,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -23,7 +27,7 @@ jobs:
         env:
           CI: true
       - name: Archive Production Artifact
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@v2
         with:
           name: dist
           path: dist
@@ -35,11 +39,12 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Download artifact
-        uses: actions/download-artifact@master
+        uses: actions/download-artifact@v2
         with:
           name: dist
+          path: dist
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
