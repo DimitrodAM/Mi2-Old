@@ -1,3 +1,9 @@
+# Old, archived version
+
+Please go to [DimitrodAM/Mi2](https://github.com/DimitrodAM/Mi2) instead!
+
+---
+
 # Mi2
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/DimitrodAM/Mi2/Firebase%20CI)
 
